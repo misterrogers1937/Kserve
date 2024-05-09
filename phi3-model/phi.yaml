@@ -1,0 +1,13 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "phi4"
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: pytorch
+      storageUri: "https://anandindiallmops.blob.core.windows.net/llm-model/upload"
+      resources:
+        requests:
+          memory: 16Gi
